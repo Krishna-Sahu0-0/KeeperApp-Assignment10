@@ -40,9 +40,9 @@ A minimalist note-taking application built with React, enabling users to create,
    ```bash
    git clone https://github.com/Krishna-Sahu0-0/KeeperApp-Assignment10.git
    cd KeeperApp-Assignment10
-2. npm install
-3. npm start
+2. **npm install**
+3. **npm start**
 
-## The app will be available at http://localhost:3000.
+### The app will be available at http://localhost:3000.
 
 Feel free to fork the repository and contribute!
