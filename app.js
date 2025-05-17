@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <div className="main-content">
+      <div className="container py-4 main-content">
         <CreateArea
           onAdd={addNote}
           editingNote={editIndex !== null ? notes[editIndex] : null}

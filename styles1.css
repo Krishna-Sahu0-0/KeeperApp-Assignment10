@@ -149,3 +149,7 @@ form button:hover {
 .main-content {
   flex: 1;
 }
+
+body, html {
+  overflow: hidden;
+}

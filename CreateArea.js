@@ -14,7 +14,7 @@ function CreateArea(props) {
     }
   }, [props.editingNote]);
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setNote(prevNote => ({
       ...prevNote,
@@ -22,31 +22,35 @@ function CreateArea(props) {
     }));
   }
 
-  function submitNote(event) {
+  const submitNote = (event) => {
     event.preventDefault();
-    if (note.title.trim() !== "" || note.content.trim() !== "") {
-      props.onAdd(note);
-      setNote({ title: "", content: "" });
+    if (note.title.trim() === "" && note.content.trim() === "") {
+      alert("Please enter a title or content before adding a note.");
+      return;
     }
+    props.onAdd(note);
+    setNote({ title: "", content: "" });
   }
 
   return (
     <div>
-      <form>
+      <form className="p-4 bg-white rounded shadow mb-4">
         <input
+          className="form-control mb-2"
           name="title"
           onChange={handleChange}
           value={note.title}
           placeholder="Title"
         />
         <textarea
+          className="form-control mb-2"
           name="content"
           onChange={handleChange}
           value={note.content}
           placeholder="Take a note..."
           rows="3"
         />
-        <button onClick={submitNote}>
+        <button className="btn btn-warning" onClick={submitNote}>
           {props.isEditing ? "Save" : "Add"}
         </button>
       </form>
