@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
-function App() {
+const App = () => {
   const [notes, setNotes] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
 
@@ -53,6 +53,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
